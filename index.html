@@ -10,12 +10,22 @@
 </head>
 <body>
     <div id="root">
-
+        <ul>
+            <li v-for="data in database">
+                <h3>{{data.author}}</h3>
+                <p>{{data.title}}</p>
+                <p>{{data.year}}</p>
+                <img :src="data.poster" :alt="data.author">
+                <p>{{data.genre}}</p>
+            </li>
+        </ul>
     </div>
 
     <!-- vue -->
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- js -->
     <script src="js/main.js"></script>
 </body>
